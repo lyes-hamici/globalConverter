@@ -55,6 +55,7 @@ public class Menu {
                     break;
                     case "4":
                     // redirect to  decimal choice(scanner);
+                    AsciiConverter.scanText(scanner);
                     break;
                 case "5":
                     System.out.println("-----------------------");

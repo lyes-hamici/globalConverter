@@ -8,9 +8,10 @@ public class AsciiConverter {
         try {
             printOptions();
             int userChoice = scanner.nextInt();
+            scanner.nextLine();
             System.out.print("Enter the text to convert: ");
             String userInput = scanner.nextLine();
-            userChoices(userChoice);
+            userChoices(userChoice, userInput);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -78,5 +79,6 @@ public class AsciiConverter {
         System.out.println("1: Text --> ASCII");
         System.out.println("2: ASCII --> Text");
         System.out.println("3: Quit");
+        System.out.print("Yopur choice: ");
     }
 }
