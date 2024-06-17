@@ -24,9 +24,11 @@ public class Menu {
         }
         System.out.println(); // Line break
         System.out.println("----------------------");
-        System.out.println("1 : Text --> ASCII"); // Option 1 --> Text --> ASCII
-        System.out.println("2 : ASCII --> Text"); // Option 2 --> ASCII --> Text
-        System.out.println("3 : Quit"); // Option 3 --> Quit
+        System.out.println("1 : Binary"); // Option 1 
+        System.out.println("2 : Hexadecimal"); // Option 2 
+        System.out.println("3 : Octal"); // Option 3
+        System.out.println("4 : Decimal"); // Option 4 
+        System.out.println("5 : Quit"); // Option 5 --> Quit
 
         System.out.println(); // Line break
 
@@ -43,12 +45,18 @@ public class Menu {
 
             switch (value) {
                 case "1":
-                    // redirect to ASCII conversion choice(scanner);
+                    BinaryConverter.ConverterToBinary(scanner);
                     break;
                 case "2":
-                    // redirect to text conversion choice(scanner);
+                    // redirect to  hexadecimal choice(scanner);
                     break;
-                case "3":
+                    case "3":
+                    // redirect to  octal choice(scanner);
+                    break;
+                    case "4":
+                    // redirect to  decimal choice(scanner);
+                    break;
+                case "5":
                     System.out.println("-----------------------");
                     System.out.println("Looking forward to seeing you again.");
                     System.out.println("-----------------------");
