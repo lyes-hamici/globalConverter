@@ -51,7 +51,7 @@ public class Menu {
                     // redirect to  hexadecimal choice(scanner);
                     break;
                     case "3":
-                    // redirect to  octal choice(scanner);
+                    OctalConverter.ConverterToOctal(scanner);
                     break;
                     case "4":
                     // redirect to  decimal choice(scanner);
