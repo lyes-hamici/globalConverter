@@ -43,7 +43,7 @@ public class Menu {
 
             switch (value) {
                 case "1":
-                    // redirect to ASCII conversion choice(scanner);
+                    AsciiConverter.scanText(scanner);
                     break;
                 case "2":
                     // redirect to text conversion choice(scanner);
