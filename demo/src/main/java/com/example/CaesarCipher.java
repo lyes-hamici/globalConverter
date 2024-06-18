@@ -2,29 +2,27 @@ package com.example;
 
 public class CaesarCipher {
 
-    // Fonction pour chiffrer une chaîne avec un chiffre de César
+    // Function to encrypt a string using a Caesar cipher
     public static String caesarCipher(String input, int key) {
         StringBuilder encrypted = new StringBuilder();
 
-        // Parcourir chaque caractère de la chaîne
+        // Loop through each character in the string
         for (char character : input.toCharArray()) {
-            // Vérifier si le caractère est une lettre majuscule
+            // Check if the character is an uppercase letter
             if (character >= 'A' && character <= 'Z') {
                 char newChar = (char) (((character - 'A' + key) % 26) + 'A');
                 encrypted.append(newChar);
             }
-            // Vérifier si le caractère est une lettre minuscule
+            // Check if the character is a lowercase letter
             else if (character >= 'a' && character <= 'z') {
                 char newChar = (char) (((character - 'a' + key) % 26) + 'a');
                 encrypted.append(newChar);
             }
-            // Si ce n'est pas une lettre, ne pas modifier le caractère
+            // If it is not a letter, do not modify the character
             else {
                 encrypted.append(character);
             }
         }
 
         return encrypted.toString();
-    }
-}
-
+    }}
