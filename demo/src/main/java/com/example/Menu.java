@@ -48,7 +48,7 @@ public class Menu {
                     BinaryConverter.ConverterToBinary(scanner);
                     break;
                 case "2":
-                    // redirect to  hexadecimal choice(scanner);
+                    HexConverter.scanText(scanner);
                     break;
                     case "3":
                     OctalConverter.ConverterToOctal(scanner);
