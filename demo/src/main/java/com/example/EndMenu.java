@@ -9,19 +9,22 @@ public class EndMenu {
         Scanner scanner = new Scanner(System.in);
         String choice = scanner.nextLine();
 
-        scanner.close();
+        
 
         switch (choice) {
             case "Y":
                 Menu.menu();
+                scanner.close();
                 break;
             case "N":
                 System.out.println("Closure of the program...");
+                scanner.close();
                 break;
 
             default:
                 System.out.println("Invalid choice");
                 System.out.println("Closure of the program...");
+                scanner.close();
                 break;
         }
     }
