@@ -27,6 +27,23 @@ public class OctalConverter {
         String octalString = stringToOctal(input);
         System.out.println("Octal representation:");
         printWithSpaces(octalString);
+
+        System.out.print("Go back to the main menu Y/N : ");
+        String choice = scanner.nextLine();
+
+        switch (choice) {
+            case "Y":
+                Menu.menu();
+                break;
+            case "N":
+                System.out.println("Closure of the program...");
+                break;
+
+            default:
+                System.out.println("Invalid choice");
+                System.out.println("Closure of the program...");
+                break;
+        }
     }
     
     public static void octalToTextConverter(Scanner scanner) {
@@ -35,6 +52,23 @@ public class OctalConverter {
         
         String convertedText = octalToString(octalInput);
         System.out.println("Converted back to text: " + convertedText);
+
+        System.out.print("Go back to the main menu Y/N : ");
+        String choice = scanner.nextLine();
+
+        switch (choice) {
+            case "Y":
+                Menu.menu();
+                break;
+            case "N":
+                System.out.println("Closure of the program...");
+                break;
+
+            default:
+                System.out.println("Invalid choice");
+                System.out.println("Closure of the program...");
+                break;
+        }
     }
 
     public static String stringToOctal(String input) {
