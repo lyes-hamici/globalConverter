@@ -34,10 +34,27 @@ public class BinaryConverter {
     public static void binaryToTextConverter(Scanner scanner) {
         System.out.print("Enter a binary string (space-separated): ");
         String binaryInput = scanner.nextLine();
-        
-        String convertedText = binaryToString(binaryInput);
-        System.out.println("Converted back to text: " + convertedText);
-        EndMenu.end();}
+        System.out.print("Do you want to encrypt the result? Y/N : ");
+        String caesar = scanner.nextLine();
+
+        switch (caesar) {
+            case "Y":
+                System.out.print("Enter an encryption key (integer): ");
+                int key = scanner.nextInt();
+                System.out.println("Converted back to text: " + CaesarCipher.caesarCipher(binaryToString(binaryInput), key));
+                break;
+            case "N":
+                String convertedText = binaryToString(binaryInput);
+                System.out.println("Converted back to text: " + convertedText);
+                break;
+
+            default:
+                System.out.println("Invalid choice");
+                System.out.println("Closure of the program...");
+                break;
+        }
+        EndMenu.end();
+        }
 
     public static String stringToBinary(String input) {
         StringBuilder binaryResult = new StringBuilder();

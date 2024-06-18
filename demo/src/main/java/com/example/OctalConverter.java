@@ -34,11 +34,27 @@ public class OctalConverter {
     public static void octalToTextConverter(Scanner scanner) {
         System.out.print("Enter an octal string (space-separated): ");
         String octalInput = scanner.nextLine();
-        
-        String convertedText = octalToString(octalInput);
-        System.out.println("Converted back to text: " + convertedText);
+        System.out.print("Do you want to encrypt the result? Y/N : ");
+        String caesar = scanner.nextLine();
 
+        switch (caesar) {
+            case "Y":
+                System.out.print("Enter an encryption key (integer): ");
+                int key = scanner.nextInt();
+                System.out.println("Converted back to text: " + CaesarCipher.caesarCipher(octalToString(octalInput), key));
+                break;
+            case "N":
+                String convertedText = octalToString(octalInput);
+                System.out.println("Converted back to text: " + convertedText);
+                break;
+
+            default:
+                System.out.println("Invalid choice");
+                System.out.println("Closure of the program...");
+                break;
+        }
         EndMenu.end();
+
     }
 
     public static String stringToOctal(String input) {
