@@ -66,53 +66,14 @@ public class AsciiConverter {
     public static void printAscii(String ascii)
     {
         System.out.println("The ASCII value of the text is: " + ascii);
-
-        System.out.print("Go back to the main menu Y/N : ");
-
-        Scanner scanner = new Scanner(System.in);
-        String choice = scanner.nextLine();
-
-        scanner.close();
-
-        switch (choice) {
-            case "Y":
-                Menu.menu();
-                break;
-            case "N":
-                System.out.println("Closure of the program...");
-                break;
-
-            default:
-                System.out.println("Invalid choice");
-                System.out.println("Closure of the program...");
-                break;
-        }
+        EndMenu.end();
+        
     }
 
     public static void printText(String text)
     {
         System.out.println("The text value of the ASCII is: " + text);
-
-        System.out.print("Go back to the main menu Y/N : ");
-
-        Scanner scanner = new Scanner(System.in);
-        String choice = scanner.nextLine();
-
-        scanner.close();
-
-        switch (choice) {
-            case "Y":
-                Menu.menu();
-                break;
-            case "N":
-                System.out.println("Closure of the program...");
-                break;
-
-            default:
-                System.out.println("Invalid choice");
-                System.out.println("Closure of the program...");
-                break;
-        }
+        EndMenu.end();
     }
 
     public static void printOptions()

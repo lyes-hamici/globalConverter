@@ -27,22 +27,7 @@ public class BinaryConverter {
         String binaryString = stringToBinary(input);
         System.out.println("Binary representation: " + binaryString);
 
-        System.out.print("Go back to the main menu Y/N : ");
-        String choice = scanner.nextLine();
-
-        switch (choice) {
-            case "Y":
-                Menu.menu();
-                break;
-            case "N":
-                System.out.println("Closure of the program...");
-                break;
-
-            default:
-                System.out.println("Invalid choice");
-                System.out.println("Closure of the program...");
-                break;
-        }
+        EndMenu.end();
 
     }
     
@@ -52,22 +37,7 @@ public class BinaryConverter {
         
         String convertedText = binaryToString(binaryInput);
         System.out.println("Converted back to text: " + convertedText);
-        System.out.print("Go back to the main menu Y/N : ");
-        String choice = scanner.nextLine();
-
-        switch (choice) {
-            case "Y":
-                Menu.menu();
-                break;
-            case "N":
-                System.out.println("Closure of the program...");
-                break;
-
-            default:
-                System.out.println("Invalid choice");
-                System.out.println("Closure of the program...");
-                break;
-        }}
+        EndMenu.end();}
 
     public static String stringToBinary(String input) {
         StringBuilder binaryResult = new StringBuilder();
