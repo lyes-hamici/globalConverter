@@ -10,7 +10,7 @@ public class AsciiConverter {
         try {
             printOptions();
             userChoices(scanner);
-            EndMenu.end();
+            EndMenu.end(scanner);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -90,14 +90,13 @@ public class AsciiConverter {
     public static void printAscii(String ascii)
     {
         System.out.println("The ASCII value of the text is: " + ascii);
-        EndMenu.end();
+        
         
     }
 
     public static void printText(String text)
     {
         System.out.println("The text value of the ASCII is: " + text);
-        EndMenu.end();
     }
 
     public static void printOptions()

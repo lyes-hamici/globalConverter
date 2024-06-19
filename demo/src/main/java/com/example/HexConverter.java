@@ -11,6 +11,7 @@ public class HexConverter {
             System.out.print("Enter the text to convert: ");
             String userInput = scanner.nextLine();
             userChoices(userChoice, userInput);
+            EndMenu.end(scanner);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -95,14 +96,14 @@ public class HexConverter {
     public static void printHex(String hex)
     {
         System.out.println("The HEXADECIAML value of the text is: " + hex);
-        EndMenu.end();
+        
         
     }
 
     public static void printText(String text)
     {
         System.out.println("The text value of the HEXADECIMAL is: " + text);
-        EndMenu.end();
+       
     }
 
     public static void printOptions()

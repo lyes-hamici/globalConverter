@@ -3,10 +3,9 @@ package com.example;
 import java.util.Scanner;
 
 public class EndMenu {
-    public static void end() {
+    public static void end(Scanner scanner) {
         System.out.print("Go back to the main menu Y/N : ");
 
-        Scanner scanner = new Scanner(System.in);
         String choice = scanner.nextLine();
 
         
