@@ -10,6 +10,7 @@ public class TextDecipher {
 
         System.out.print("Enter a key : ");
         int key = scanner.nextInt();
+        scanner.nextLine();
 
         System.out.println("Decrypted text : " + CaesarCipher.caesarDecipher(text, key));
 

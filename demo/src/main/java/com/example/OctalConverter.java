@@ -41,6 +41,7 @@ public class OctalConverter {
             case "Y":
                 System.out.print("Enter an encryption key (integer): ");
                 int key = scanner.nextInt();
+                scanner.nextLine();
                 System.out.println("Converted back to text: " + CaesarCipher.caesarCipher(octalToString(octalInput), key));
                 break;
             case "N":

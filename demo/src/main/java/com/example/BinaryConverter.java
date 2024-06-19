@@ -41,6 +41,7 @@ public class BinaryConverter {
             case "Y":
                 System.out.print("Enter an encryption key (integer): ");
                 int key = scanner.nextInt();
+                scanner.nextLine();
                 System.out.println("Converted back to text: " + CaesarCipher.caesarCipher(binaryToString(binaryInput), key));
                 break;
             case "N":
