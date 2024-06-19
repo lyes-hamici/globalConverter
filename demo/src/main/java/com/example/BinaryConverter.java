@@ -27,7 +27,7 @@ public class BinaryConverter {
         String binaryString = stringToBinary(input);
         System.out.println("Binary representation: " + binaryString);
 
-        EndMenu.end();
+        EndMenu.end(scanner);
 
     }
     
@@ -53,7 +53,7 @@ public class BinaryConverter {
                 System.out.println("Closure of the program...");
                 break;
         }
-        EndMenu.end();
+        EndMenu.end(scanner);
         }
 
     public static String stringToBinary(String input) {
