@@ -3,29 +3,31 @@ package com.example;
 import java.util.Scanner;
 
 public class HexConverter {
+    private static String result;
+
      public static void scanText(Scanner scanner) {
         try {
             printOptions();
-            int userChoice = scanner.nextInt();
-            scanner.nextLine();
-            System.out.print("Enter the text to convert: ");
-            String userInput = scanner.nextLine();
-            userChoices(userChoice, userInput);
+            userChoices(scanner);
             EndMenu.end(scanner);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
     }
 
-    public static void userChoices(int userChoice, String userInput) {
+    public static void userChoices(Scanner scanner) {
+        int userChoice = scanner.nextInt();
+        scanner.nextLine();
+        System.out.print("Enter the text to convert: ");
+        String userInput = scanner.nextLine();
         switch (userChoice) {
             case 1:
-                String hex = fromStringToHex(userInput);
-                printHex(hex);
+                result = fromStringToHex(userInput);
+                printHex(result);
                 break;
             case 2:
-                String text = fromHexToString(userInput);
-                printText(text);
+                result = fromHexToString(userInput);
+                userCypherChoice(scanner);
                 break;
             case 3:
                 System.out.println("-----------------------");
@@ -34,10 +36,29 @@ public class HexConverter {
                 break;
             default:
                 System.out.println("Invalid choice");
-                userChoices(userChoice, userInput);
+                userChoices(scanner);
                 break;
         }
         
+    }
+    
+    public static void userCypherChoice(Scanner scanner) {
+        System.out.print("Do you want to encrypt the result? Y/N : ");
+        String caesar = scanner.nextLine();
+        switch (caesar) {
+            case "Y":
+                System.out.print("Enter an encryption key (integer): ");
+                int key = scanner.nextInt();
+                result = CaesarCipher.caesarCipher(result, key);
+                printText(result);
+                break;
+            case "N":
+                printText(result);
+                break;
+            default:
+                System.out.println("Invalid choice");
+                userCypherChoice(scanner);
+        }
     }
 
     public static String fromStringToHex(String text)
