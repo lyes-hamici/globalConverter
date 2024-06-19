@@ -8,8 +8,6 @@ public class EndMenu {
 
         String choice = scanner.nextLine();
 
-        
-
         switch (choice) {
             case "Y":
                 Menu.menu();

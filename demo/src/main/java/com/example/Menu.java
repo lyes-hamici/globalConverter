@@ -28,7 +28,8 @@ public class Menu {
         System.out.println("2 : Hexadecimal"); // Option 2 
         System.out.println("3 : Octal"); // Option 3
         System.out.println("4 : Decimal"); // Option 4 
-        System.out.println("5 : Quit"); // Option 5 --> Quit
+        System.out.println("5 : Decipher"); // Option 5 --> Quit
+        System.out.println("6 : Quit"); // Option 5 --> Quit
 
         System.out.println(); // Line break
 
@@ -54,10 +55,12 @@ public class Menu {
                     OctalConverter.ConverterToOctal(scanner);
                     break;
                     case "4":
-                    // redirect to  decimal choice(scanner);
                     AsciiConverter.scanText(scanner);
                     break;
-                case "5":
+                    case "5":
+                    TextDecipher.textDecipher(scanner);
+                    break;
+                case "6":
                     System.out.println("-----------------------");
                     System.out.println("Looking forward to seeing you again.");
                     System.out.println("-----------------------");
