@@ -51,6 +51,7 @@ public class HexConverter {
                 int key = scanner.nextInt();
                 result = CaesarCipher.caesarCipher(result, key);
                 printText(result);
+                scanner.nextLine();
                 break;
             case "N":
                 printText(result);
@@ -117,14 +118,11 @@ public class HexConverter {
     public static void printHex(String hex)
     {
         System.out.println("The HEXADECIAML value of the text is: " + hex);
-        
-        
     }
 
     public static void printText(String text)
     {
         System.out.println("The text value of the HEXADECIMAL is: " + text);
-       
     }
 
     public static void printOptions()

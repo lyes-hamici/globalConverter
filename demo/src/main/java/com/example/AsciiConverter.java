@@ -54,6 +54,7 @@ public class AsciiConverter {
                 int key = scanner.nextInt();
                 result = CaesarCipher.caesarCipher(result, key);
                 printText(result);
+                scanner.nextLine();
                 break;
             case "N":
                 printText(result);
