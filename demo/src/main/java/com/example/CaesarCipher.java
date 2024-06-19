@@ -25,4 +25,9 @@ public class CaesarCipher {
         }
 
         return encrypted.toString();
-    }}
+    }
+    
+    public static String caesarDecipher(String input, int key) {
+        return caesarCipher(input, -key);
+    }
+}
