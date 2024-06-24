@@ -9,7 +9,6 @@ public class HexConverter {
         try {
             printOptions();
             userChoices(scanner);
-            EndMenu.end(scanner);
         } catch (Exception ex) {
             ex.printStackTrace();
         }

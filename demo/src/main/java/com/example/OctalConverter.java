@@ -28,7 +28,6 @@ public class OctalConverter {
         System.out.println("Octal representation:");
         printWithSpaces(octalString);
 
-        EndMenu.end(scanner);
     }
     
     public static void octalToTextConverter(Scanner scanner) {
@@ -54,7 +53,6 @@ public class OctalConverter {
                 System.out.println("Closure of the program...");
                 break;
         }
-        EndMenu.end(scanner);
 
     }
 

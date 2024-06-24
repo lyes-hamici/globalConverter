@@ -10,7 +10,6 @@ public class AsciiConverter {
         try {
             printOptions();
             userChoices(scanner);
-            EndMenu.end(scanner);
         } catch (Exception ex) {
             ex.printStackTrace();
         }

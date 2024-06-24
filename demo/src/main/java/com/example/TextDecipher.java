@@ -14,7 +14,5 @@ public class TextDecipher {
 
         System.out.println("Decrypted text : " + CaesarCipher.caesarDecipher(text, key));
 
-        EndMenu.end(scanner);
-        
     }
 }
